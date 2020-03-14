@@ -1,3 +1,81 @@
-// Place all the styles related to the measure controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+  height: 70px;
+  width: 100vw;
+  background-color: rgba($color: #003366, $alpha: 1);
+  border-bottom: 6px dotted #fff;
+  span {
+    color: #fff;
+    font-size: 30px;
+    line-height: 70px;
+    padding-left: 50px;
+    font-family:  "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+  }
+}
+
+.background {
+  background-image: url(https://images.unsplash.com/photo-1559819614-8e87b90b8e9b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE1ODB9);
+  background-size: cover;
+  height: calc( 100vh - 70px );
+  .app-title {
+    padding-top: 40px;
+    color: #003366;
+    font-weight: bolder;
+    .subtitle {
+      font-size: 22px;
+      padding-left: 25%;
+    }
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bolder;
+    }
+  }
+  .content-wrapper {
+    margin: 20px 25%;
+    padding: 30px 40px;
+    background-color: rgba($color: #fff, $alpha: 0.7);
+    border: 8px dotted #003366 ;
+    border-radius: 10px;
+    &__explanation {
+      font-family:  "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+      font-size: 20px;
+      font-weight: bolder;
+      margin-bottom: 30px;
+      p {
+        margin: 10px;
+      }
+    }
+    &__form {
+      .label {
+        margin: 10px;
+        font-size: 24px;
+        font-weight: bolder;
+      }
+      .unit {
+        margin: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      select {
+        height: 35px;
+        width: 100px;
+        margin: 0 15px 10px 15px ;
+        font-size: 20px;
+      }
+      #submit-btn {
+        width: 350px;
+        margin: 20px 10%;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 10px;
+        background-color: #003366 ;
+        color: #fff;
+        border-radius: 20px;
+      }
+      p {
+        text-align: end;
+        font-weight: bolder;
+      }
+    }
+  }
+}
