@@ -1,0 +1,90 @@
+%header
+  %span.header-text ち ょ っ と 変 わ っ た 身 体 測 定 ！？　〜 結 果 発 表 〜
+  = link_to root_path do
+    %span.top-link ▶︎　他の人でも測ってみる
+.background
+  .app-title
+    .outcome
+      %span.title 測定結果が出ました！身長
+      %span.data
+        = @measure.height
+      %span.title cm、体重
+      %span.data
+        = @measure.weight
+      %span.title kg の方は ・・・
+  .outcome-wrapper
+    %ul.outcome-wrapper__height
+      %li
+        ➡︎ りんご
+        %span.result
+          =(@measure.height/8.to_f).round(1)
+        個分の高さ
+      %li
+        ➡︎ たまご
+        %span.result
+          =(@measure.height/5.to_f).round
+        個分の高さ
+      %li
+        ➡︎ バスケットゴールの高さは、
+        %br/
+        　　あなた
+        %span.result
+          =(305/@measure.height.to_f).round(1)
+        人分
+      %li
+        ➡︎ 東京タワーの高さは、
+        %br/
+        　　あなた
+        %span.result
+          =(33300/@measure.height.to_f).round
+        人分
+      %li
+        ➡︎ 100円玉
+        %span.result
+          =(@measure.height/0.17.to_f).round
+        枚分の高さ
+      %li
+        ➡︎ ティッシュ
+        %span.result
+          =(@measure.height/0.002.to_f).round
+        枚分の高さ
+    %ul.outcome-wrapper__weight
+      %li
+        ➡︎ りんご
+        %span.result
+          =(@measure.weight/0.3.to_f).round(1)
+        個分の重さ
+      %li
+        ➡︎ たまご
+        %span.result
+          =(@measure.weight/0.06.to_f).round
+        個分の重さ
+      %li
+        ➡︎ スイカ
+        %span.result
+          =(@measure.weight/5.to_f).round(1)
+        個分の重さ
+      %li
+        ➡︎ ミライース（軽自動車）の重さは、
+        %br/
+        　　あなた
+        %span.result
+          =(730/@measure.weight.to_f).round(1)
+        人分
+      %li
+        ➡︎ アフリカゾウ（雄）の重さは、
+        %br/
+        　　あなた
+        %span.result
+          =(6000/@measure.weight.to_f).round(1)
+        人分
+      %li
+        ➡︎ 100円玉
+        %span.result
+          =(@measure.weight/0.0048.to_f).round
+        枚分の重さ
+  .bottom-message
+    %p 意外な結果が出たのでは？よかったら話のネタにでもお使いください。
+
+
+

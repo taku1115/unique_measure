@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: "measure#input"
+  root to: "measures#new"
+  resources :measures, only: :create 
 end
