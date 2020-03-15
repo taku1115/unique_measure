@@ -1,0 +1,25 @@
+%header
+  %span.header-text ち ょ っ と 変 わ っ た 身 体 測 定 ！？
+.background
+  .app-title
+    %p.subtitle サクッと診断
+    %h1.title あなたの身長・体重は〇〇何個分！？
+  .content-wrapper
+    .content-wrapper__explanation
+      %p 遊びに来てくださりありがとうございます。
+      %p ここでは、皆さんの身長と体重を
+      %p ” 色々な物差し ” で測ってみます。
+    .content-wrapper__form
+      = form_for @measure do |f|
+        %span.label あなたの身長　:
+        = f.select :height, options_for_select(@height_array, @selected_height)
+         
+        %span.unit cm
+        %br/
+        %span.label あなたの体重　:
+        = f.select :weight, options_for_select(@weight_array, @selected_weight)
+         
+        %span.unit kg
+        %br/
+        = f.submit " 診 断 す る　▶︎ ▶︎ ▶︎", class:"submit-btn"
+        %p 気になる結果は・・・？
